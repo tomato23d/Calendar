@@ -73,12 +73,17 @@ function printHour1(hour, timing){
 
 reviewTime();
 
-const HTML2 =` 
+let HTML2 = "";
+
+function addScript(){
+      HTML2 = ` 
 </form>
 </div>
  <script src="assets/scripts/script2.js"></script>
 </body>
 </html>`
+};
+addScript();
 fs.appendFile(filename, HTML2, (err) =>
  { err ? console.log(err) : console.log('Success!')})
 
