@@ -1,7 +1,7 @@
 const dayjs = require('dayjs');
 const fs = require('fs');
 
-const filename = "myfile.html";
+const filename = "index.html";
 
 let currentHour = dayjs().format('H');
 console.log(currentHour);
