@@ -10,8 +10,8 @@ let today = dayjs().format('D');
 
 const todayIs = (dayjs().format('[Today is] D MMMM YYYY [,] dddd'));
 const timeNow = (dayjs().format('[Time Now:] H [:] mm'));
-//const workhours = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
-const workhours = [16, 17, 18, 19];
+const workhours = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
+//const workhours = [16, 17, 18, 19];
 
 function schedule(day, hour){
     this.day = today;
@@ -58,9 +58,9 @@ function reviewTime(){
 //const hourA = new schedule(today, 18);    
 function printHour1(hour, timing){
       fileOutput = (`
-      <div class="${timing}">
+      <div class="linehour">
             <div id = "h.${hour}" class="hour">${hour}</div>
-            <textarea id="t.${hour}" name="comments"></textarea>
+            <textarea id="t.${hour}" class="${timing}"></textarea>
             <button id = "b.${hour}"  class="saveBtn" aria-label="save">
                   <i class="fas fa-save" aria-hidden="true">save</i>
             </button>
